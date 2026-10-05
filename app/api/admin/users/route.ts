@@ -1,0 +1,2 @@
+import {NextResponse} from 'next/server'; import {getDb} from '@/lib/db'; import {isAdmin} from '@/lib/security';
+export async function GET(){if(!(await isAdmin()))return NextResponse.json({error:'Unauthorized'},{status:401}); const db=await getDb(); const users=await db.collection('users').find({}).sort({createdAt:-1}).limit(500).toArray(); const tx=await db.collection('transactions').find({}).sort({createdAt:-1}).limit(1000).toArray(); return NextResponse.json({users,transactions:tx});}

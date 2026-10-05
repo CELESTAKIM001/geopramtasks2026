@@ -1,0 +1,8 @@
+{
+  "name": "geopram-tasks-marketplace",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {"dev":"next dev","build":"next build","start":"next start","lint":"next lint"},
+  "dependencies": {"@mongodb-js/zstd":"^2.0.1","mongodb":"^6.19.0","next":"^15.5.4","nodemailer":"^7.0.3","react":"^19.1.1","react-dom":"^19.1.1"},
+  "devDependencies": {"@types/node":"^22.15.30","@types/nodemailer":"^7.0.1","@types/react":"^19.1.10","@types/react-dom":"^19.1.7","typescript":"^5.9.2"}
+}
